@@ -21,6 +21,8 @@ const page = async () => {
 
     const defaultAccount = accounts?.find((account) => account.isDefault);
 
+    console.log(!defaultAccount);
+
     let budgetData = null;
     if (defaultAccount) {
         budgetData = await getCurrentBudget(defaultAccount.id);
@@ -31,15 +33,20 @@ const page = async () => {
             <div className='w-2/3 flex flex-col gap-10'>
                 <h1 className='text-5xl font-bold' style={{ color: colors.textPrimary }}>DashBoard</h1>
 
-                <BudgetProgress
-                    initialBudget={budgetData?.budget}
-                    currentExpenses={budgetData?.currentExpenses || 0}
-                />
+                {
+                    defaultAccount &&
+                    <>
+                        <BudgetProgress
+                            initialBudget={budgetData?.budget}
+                            currentExpenses={budgetData?.currentExpenses || 0}
+                        />
 
-                <DashboardOverview
-                    accounts={accounts}
-                    transactions={transactions || []}
-                />
+                        <DashboardOverview
+                            accounts={accounts}
+                            transactions={transactions || []}
+                        />
+                    </>
+                }
 
                 <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
                     <CreateAccountDrawer>
