@@ -10,8 +10,10 @@ import { Button } from './ui/button'
 import Link from 'next/link'
 import { LayoutDashboard, PenBox } from 'lucide-react'
 import colors from '@/colors'
+import { checkUser } from '@/lib/checkUser'
 
-const Header = () => {
+const Header = async () => {
+    await checkUser();
     return (
         <header className='w-full p-5 z-50 sticky top-0' style={{ background: colors.surface }}>
             <nav className='flex justify-between'>

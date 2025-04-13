@@ -3,7 +3,6 @@ import colors from '@/colors'
 import React from 'react'
 
 const UserSaying = ({ data }) => {
-    console.log(data)
     return (
         <div>
             <div style={{ border: `1px solid ${colors.border}`, background: colors.cardBase }} className='flex items-center gap-5 p-5 rounded-xl'>
