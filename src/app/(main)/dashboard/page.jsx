@@ -8,8 +8,11 @@ import { DashboardOverview } from './_components/DashBoardOverView';
 import CreateAccountDrawer from '@/components/CreateAccountDrawer';
 import AccountCard from './_components/AccountCard';
 import colors from '@/colors';
+import { checkUser } from '@/lib/checkUser';
 
 const page = async () => {
+
+    await checkUser();
 
     const [accounts, transactions] = await Promise.all([
         getUserAccounts(),

@@ -13,7 +13,9 @@ import colors from '@/colors'
 import { checkUser } from '@/lib/checkUser'
 
 const Header = async () => {
+
     await checkUser();
+
     return (
         <header className='w-full p-5 z-50 sticky top-0' style={{ background: colors.surface }}>
             <nav className='flex justify-between'>
@@ -48,7 +50,6 @@ const Header = async () => {
                             <Button className={'text-white'} style={{ background: colors.blueAccent, border: `1px solid ${colors.border}` }} variant={'ghost'}>Sign Up</Button>
                         </SignUpButton>
                     </SignedOut>
-
 
                 </div>
             </nav>

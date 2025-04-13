@@ -1,5 +1,6 @@
 import arcjet, { createMiddleware, detectBot, shield } from "@arcjet/next";
 import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
+import { revalidatePath } from "next/cache";
 import { NextResponse } from "next/server";
 
 const isProtectedRoute = createRouteMatcher([
@@ -17,8 +18,8 @@ const aj = arcjet({
     detectBot({
       mode: "LIVE",
       allow: [
-        "CATEGORY:SEARCH_ENGINE", 
-        "GO_HTTP", 
+        "CATEGORY:SEARCH_ENGINE",
+        "GO_HTTP",
       ],
     }),
   ],
