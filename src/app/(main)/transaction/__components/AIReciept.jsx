@@ -1,5 +1,6 @@
 "use client";
 import { scanReceipt } from '@/app/actions/transactions';
+import colors from '@/colors';
 import { Button } from '@/components/ui/button';
 import useFetch from '@/hooks/useFetch';
 import { CameraIcon, Loader2 } from 'lucide-react';
@@ -35,7 +36,7 @@ const AIReciept = ({ onScanComplete }) => {
                     if (file) handleScanReciept(file);
                 }}
             />
-            <Button disabled={loading} className={'w-full'} onClick={() => fileInputRef.current.click()}>
+            <Button style={{ background: colors.blueAccent }} disabled={loading} className={'w-full'} onClick={() => fileInputRef.current.click()}>
                 {loading ?
                     <>
                         <Loader2 className='animate-spin' />

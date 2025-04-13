@@ -7,7 +7,7 @@ import colors from "@/colors";
 export default async function AddTransactionPage({ searchParams }) {
 
   const accounts = await getUserAccounts();
-  const editId = searchParams?.edit;
+  const editId = await searchParams.then((data) => data.edit);
 
   let initialData = null;
   if (editId) {

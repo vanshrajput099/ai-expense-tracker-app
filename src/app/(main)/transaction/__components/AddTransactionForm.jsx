@@ -86,7 +86,7 @@ const AddTransactionForm = ({ accounts, categories, editMode = false, initialDat
           : "Transaction created successfully"
       );
       reset();
-      router.push(`/account/${transactionResult.data.accountId}`);
+      router.push(`/account/${data.data.accountId}`);
     }
   }, [data, loading, editMode]);
 
@@ -173,7 +173,7 @@ const AddTransactionForm = ({ accounts, categories, editMode = false, initialDat
         </div>
         <div className='flex flex-col gap-2'>
           <label className='font-bold' htmlFor="">Date</label>
-          <Popover>
+          <Popover className="bg-red-500">
             <PopoverTrigger asChild>
               <Button className={'flex justify-between w-full'} variant={'outline'}>
                 {date ? format(date, "PPP") : <span>Pick A Date</span>}
