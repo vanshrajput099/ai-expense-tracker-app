@@ -8,13 +8,16 @@ import colors from '@/colors';
 
 const Testimonial = async () => {
 
-    const testimonials = await getTestimonials();
+    // let testimonials = await getTestimonials();
+    const testimonials = {
+        data:[]
+    }
 
     return (
         <div className="w-full flex flex-col items-center justify-center py-20">
             <div className="w-3/4 gap-10 flex flex-col justify-center items-center">
                 <h1 style={{ color: colors.textPrimary }} className='font-bold text-4xl text-center'>What Users Are Saying ?</h1>
-                <div className='flex w-full justify-center gap-10'>
+                <div className='flex w-full justify-center gap-10 max-sm:flex-col'>
                     {
                         testimonials.data.length === 0 ?
                             <>

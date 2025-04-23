@@ -28,9 +28,8 @@ const page = async () => {
 
     return (
         <div className="space-y-8 flex justify-center p-10">
-            <div className='w-2/3 flex flex-col gap-10'>
+            <div className='w-2/3 flex flex-col gap-10 max-lg:w-full'>
                 <h1 className='text-5xl font-bold' style={{ color: colors.textPrimary }}>DashBoard</h1>
-
                 {
                     defaultAccount &&
                     <>
@@ -46,7 +45,7 @@ const page = async () => {
                     </>
                 }
 
-                <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+                <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 ">
                     <CreateAccountDrawer>
                         <Card style={{ background: colors.cardBase, border: `1px solid ${colors.border}`, color: colors.textPrimary }} className="hover:shadow-md transition-shadow cursor-pointer border-dashed h-full">
                             <CardContent className="flex flex-col items-center justify-center text-muted-foreground h-full pt-5">

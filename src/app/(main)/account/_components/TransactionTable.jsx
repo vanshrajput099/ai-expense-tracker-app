@@ -167,7 +167,7 @@ const TransactionTable = ({ transactions }) => {
                     }
                     {
                         pageArray.map((ele, idx) => {
-                            return <div onClick={() => { setTablePageIndex(ele) }} className='text-white px-4 py-1 font-bold hover:cursor-pointer'>{ele + 1}</div>
+                            return <div onClick={() => { setTablePageIndex(ele) }} className='text-white px-4 py-1 font-bold hover:cursor-pointer max-lg:text-sm max-lg:px-0'>{ele + 1}</div>
                         })
                     }
                     {

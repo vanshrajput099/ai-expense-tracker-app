@@ -105,7 +105,7 @@ const AddTransactionForm = ({ accounts, categories, editMode = false, initialDat
   };
 
   return (
-    <div className='w-full text-white'>
+    <div className='w-full text-white px-5 py-2'>
       {
         !editMode && <AIReciept onScanComplete={handleScanComplete} />
       }
@@ -230,9 +230,9 @@ const AddTransactionForm = ({ accounts, categories, editMode = false, initialDat
             }
           </div>
         }
-        <div className='w-full flex gap-5'>
-          <Button type='button' onClick={() => router.back()} variant={'ghost'} className={'w-1/2'}>Cancel</Button>
-          <Button type='submit' disabled={loading} className={'w-1/2'} style={{ background: colors.blueAccent, border: `1px solid ${colors.border}` }} >
+        <div className='w-full flex gap-5 justify-between'>
+          <Button type='button' onClick={() => router.back()} variant={'ghost'} className={''}>Cancel</Button>
+          <Button type='submit' disabled={loading} className={''} style={{ background: colors.blueAccent, border: `1px solid ${colors.border}` }} >
             {
               loading ?
                 <>

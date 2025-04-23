@@ -16,10 +16,10 @@ export default async function AddTransactionPage({ searchParams }) {
   }
 
   return (
-    <div className="mx-auto px-5 flex justify-center items-center w-full py-20">
-      <div className="w-3/8">
-        <div className="flex justify-center md:justify-normal mb-8">
-          <h1 style={{ color: colors.textPrimary }} className="text-5xl gradient-title font-bold"> {editId ? "Update" : "Add"} Transaction</h1>
+    <div className="mx-auto px-5 flex justify-center items-center w-full py-10">
+      <div className="w-3/8 max-lg:w-full">
+        <div className="flex justify-center md:justify-normal mb-8 max-lg:w-full">
+          <h1 style={{ color: colors.textPrimary }} className="text-5xl gradient-title font-bold max-lg:text-3xl"> {editId ? "Update" : "Add"} Transaction</h1>
         </div>
         <AddTransactionForm
           accounts={accounts.data}

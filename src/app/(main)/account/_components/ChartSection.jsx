@@ -59,11 +59,11 @@ const ChartSection = ({ transactions }) => {
     return (
         <div style={{ width: '100%', height: 400 }}>
             <div className="flex justify-center">
-                <div className="w-5/6">
+                <div className="w-5/6 max-lg:w-[95%]">
                     <Card style={{ background: colors.cardBase, border: `1px solid ${colors.border}`, color: colors.textPrimary }}>
                         <CardHeader>
                             <div className="flex items-center justify-between">
-                                <CardTitle className={'text-2xl font-bold'}>Transaction Overview</CardTitle>
+                                <CardTitle className={'text-2xl font-bold max-lg:text-xl'}>Transaction Overview</CardTitle>
                                 <Select defaultValue={dateRange} onValueChange={setDateRange}>
                                     <SelectTrigger className="w-[180px]">
                                         <SelectValue placeholder="Select Range" />
